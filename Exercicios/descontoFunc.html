@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- entrada de dados  -->
+ <!-- = determinar se o cliente é 1- cliente, 2- funcionário e 3-vip  -->
+  <!-- = informar o total da compra -->
+    <script>
+        const valorCompras = parseFloat(prompt("Informe o valor das compras:"));
+        const tipoCliente = Number(
+        prompt(`
+            Informe o usuário:
+            [1] - Cliente
+            [2] - Funcionário
+            [3] - Vip
+        `));
+
+        let totalComDesconto;
+
+// = processamento de dados
+//   = usar a estrutura switch case para determinar se é cliente, funcionário ou vip
+        switch (tipoCliente) {
+            case 1:
+                alert("O cliente não teve nenhum desconto.");
+                break;
+        
+            case 2:
+                totalComDesconto = valorCompras * 0.1;
+                alert(
+                    `Recebeu 10% de desconto em sua compra, tendo um total de desconto de: ${totalComDesconto} reais. O total de sua compra é de: R$${valorCompras - totalComDesconto} reais.`
+                    );
+                break;
+
+            case 3:
+            totalComDesconto = valorCompras * 0.05;
+            alert(
+                `Recebeu 5% de desconto em sua compra, tendo um total de desconto de: ${totalComDesconto} reais. O total da sua compra é de: R$${valorCompras - totalComDesconto} reais`
+                );
+                break;
+        
+        default:
+        alert("Opção inválida.");
+        break;
+        }
+    </script>
+<!-- saída de dados -->
+ <!-- = se for cliente não haverá desconto -->
+  <!-- = se for funcionário terá 10% de desconto -->
+   <!-- = se for vip terá 5% de desconto -->
+    
+</body>
+</html>

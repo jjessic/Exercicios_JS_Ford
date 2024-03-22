@@ -12,9 +12,35 @@
 // determinar o número de crianças nascidas e o número de habitantes para natalidade
 // determinar o número de óbitos e o número de habitantes para mortalidade
 
+const habitantes = 214386968
+const criancas = 2635854
+const obitos = 262893
+const taxaN = criancas * 1000 / habitantes
+const taxaM = obitos * 1000 / habitantes
+
 //processamento de dados
 // realizar o calculo de natalidade e mortalidade 
 // determinar com switch case se o usuario vai querer calcular natalidade ou mortalidade
 
+const tipoNM = Number(
+    prompt(`
+        O que deseja saber? Escolha uma opção:
+        [1] - Taxa de natalidade
+        [2] - Taxa de mortalidade
+    `));
+
+
+    switch (tipoNM) {
+        case 1 :
+        alert(`A taxa de natalidade do Brasil em 2023 é de: ${taxaN.toFixed(2)}`);
+            break;
+
+        case 2 :
+        alert(`A taxa de mortalidade do Brasil em 2023 é de: ${taxaM.toFixed(2)}`);
+            break;
+    }
+
 //saída de dados
 // imprimir na tela a taxa de mortalidade ou natalidade
+
+
